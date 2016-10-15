@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding=utf-8
-__author__ = 'yangzha'
+__author__ = 'yangzhan'
 import serial,time,math
-
+#AT+CGNSINF
 def getGPS():
 	"""
 	通过sim808获取串口返回的GPS坐标
@@ -31,5 +31,7 @@ def getGPS():
 			print "Latitude=",Latitude,";Longitude=",Longitude
 			return (Latitude,Longitude)
 		modem.close()
+
+
 if __name__ == '__main__':
 	getGPS()
